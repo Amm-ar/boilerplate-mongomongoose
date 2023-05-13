@@ -27,8 +27,9 @@ const createAndSavePerson = (done) => {
   .then(
     done(null /*, data*/)
     )
-  .catch(
-    done(err, data)
+  .catch((err) =>{
+    done(err, data);
+  }
   );
   done(null /*, data*/);
 };
