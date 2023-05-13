@@ -24,8 +24,9 @@ const createAndSavePerson = (done) => {
     favoriteFoods: ["Wayka", "Asida", "Gurrasa", ],
   });
   person.save()
-  .then(
-    done(null /*, data*/)
+  .then((doc) =>{
+    done(null /*, data*/);
+  }
     )
   .catch((err) =>{
     done(err, data);
