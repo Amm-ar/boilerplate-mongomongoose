@@ -23,15 +23,10 @@ const createAndSavePerson = (done) => {
     age: 25,
     favoriteFoods: ["Wayka", "Asida", "Gurrasa", ],
   });
-  person.save()
-  .then((doc) =>{
-    done(null , doc);
+  person.save(function(err, data){
+    if(err) done(err);
+    done(null , data);
   })
-  .catch((err) =>{
-    done(err);
-  });
-  done(null /*, data*/);
-};
 
 const createManyPeople = (arrayOfPeople, done) => {
   done(null /*, data*/);
