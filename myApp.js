@@ -25,10 +25,10 @@ const createAndSavePerson = (done) => {
   });
   person.save()
   .then((doc) =>{
-    done(null /*, data*/);
+    done(null , doc);
   })
   .catch((err) =>{
-    done(err, data);
+    done(err);
   });
   done(null /*, data*/);
 };
